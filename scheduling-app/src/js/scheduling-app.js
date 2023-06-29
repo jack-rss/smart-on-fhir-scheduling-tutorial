@@ -168,6 +168,8 @@ $('#clear-patients').on('click', function(e) {
 
 function askForPatient(slotReference, type, start, end) {
   clearUI();
+  
+  $('#slots-holder-row').show();
   $('#patient-search-create-row').show();
 
   $('#patient-search-create-info').html(
