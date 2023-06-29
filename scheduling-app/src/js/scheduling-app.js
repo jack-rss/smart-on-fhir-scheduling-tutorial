@@ -67,12 +67,11 @@ function slotHTML(id, type, start, end) {
              "<h5 class='card-title'>" + type + '</h5>' +
              "<p class='card-text'>Start: " + prettyStart + '</p>' +
              "<p class='card-text'>End: " + prettyEnd + '</p>' +
-             "<a href='javascript:void(0);' class='card-link' onclick='appointmentCreate(\"" +
-               slotReference + "\", \"Patient/12508016\");'>Book</a>" +
+             "<a href='javascript:void(0);' class='card-link' onclick='askForPatient(\"" +
+               slotReference + '", "' + type + '", "' + prettyStart + '", "' + prettyEnd + "\");'>Book</a>" +
            '</div>' +
          '</div>';
 }
-
 function renderSlots(slotsHTML) {
   clearUI();
   $('#slots').html(slotsHTML);
