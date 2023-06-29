@@ -148,6 +148,13 @@ $('#patient-search-form').on('submit', function(e) {
   e.preventDefault();
   patientSearch();
 });
+;
+
+
+$('#patient-search-form').on('submit', function(e) {
+  e.preventDefault();
+  patientSearch();
+});
 
 $('#patient-create-form').on('submit', function(e) {
   e.preventDefault();
