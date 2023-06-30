@@ -129,25 +129,7 @@ function appointmentJSON(slotReference, patientReference) {
     ],
     participant: [
       {
-        actor: {
-          reference: patientReference
-        },
-        required: 'required',
-        status: 'needs-action'
-      },
-      {
         type: [
-          {
-            coding: [
-              {
-                system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14250",
-                code: "4574",
-                display: "Resource",
-                userSelected: false
-              }
-            ],
-            text: "Resource"
-          },
           {
             coding: [
               {
@@ -160,11 +142,47 @@ function appointmentJSON(slotReference, patientReference) {
         ],
         actor: {
           reference: "Practitioner/593923",
-          display: "Applegate MD, Christina"
+          display: "Cerner Test, Physician - Primary Care Cerner"
         },
         required: "required",
         status: "accepted"
       },
+      {
+        type: [
+          {
+            coding: [
+              {
+                system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14250",
+                code: "4572",
+                display: "Patient",
+                userSelected: true
+              }
+            ],
+            text: "Patient"
+          }
+        ],
+        actor: {
+          reference: "Patient/12724066",
+          display: "SMART, NANCY"
+        },
+        required: "required",
+        status: "needs-action"
+      },
+      {
+        actor: {
+          reference: "Location/21304876",
+          display: "MX Clinic 1"
+        },
+        required: "required",
+        status: "accepted"
+      }
+    ],
+    patientInstruction: "Preparations:\n- Please arrive 30 minutes prior to your scheduled appointment\nPost Appointment Instructions:\n- Be sure to return to the Front Desk prior to departing after your appointment",
+    requestedPeriod: [
+      {
+        start: "2020-07-08T13:00:00.000Z",
+        end: "2020-07-08T13:15:00.000Z"
+      }
     ],
 
     status: 'proposed'
