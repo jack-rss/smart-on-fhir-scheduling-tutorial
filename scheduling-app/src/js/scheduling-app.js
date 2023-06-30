@@ -177,14 +177,7 @@ function appointmentJSON(slotReference, patientReference) {
         status: "accepted"
       }
     ],
-    patientInstruction: "Preparations:\n- Please arrive 30 minutes prior to your scheduled appointment\nPost Appointment Instructions:\n- Be sure to return to the Front Desk prior to departing after your appointment",
-    requestedPeriod: [
-      {
-        start: "2020-07-08T13:00:00.000Z",
-        end: "2020-07-08T13:15:00.000Z"
-      }
-    ],
-
+    PRIORITY: 5,
     status: 'proposed'
   };
 }
