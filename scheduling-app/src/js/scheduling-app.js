@@ -132,19 +132,41 @@ function appointmentJSON(slotReference, patientReference) {
         actor: {
           reference: patientReference
         },
+        required: 'required',
         status: 'needs-action'
-      }
+      },
+      {
+        type: [
+          {
+            coding: [
+              {
+                system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14250",
+                code: "4574",
+                display: "Resource",
+                userSelected: false
+              }
+            ],
+            text: "Resource"
+          },
+          {
+            coding: [
+              {
+                system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                code: "PPRF",
+                display: "primary performer"
+              }
+            ]
+          }
+        ],
+        actor: {
+          reference: "Practitioner/593923",
+          display: "Applegate MD, Christina"
+        },
+        required: "required",
+        status: "accepted"
+      },
     ],
-    appointmentType: {
-      coding: [
-        {
-          system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14249",
-          code: "4047611"
-        }
-      ]
-    },
-    priority: 5,
-    description: "Discussion on the results of your recent MRI",
+
     status: 'proposed'
   };
 }
