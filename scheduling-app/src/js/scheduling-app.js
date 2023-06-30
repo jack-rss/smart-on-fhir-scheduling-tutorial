@@ -196,7 +196,7 @@ function patientSearch() {
   var patientParams = {name: form.elements[0].value};
 
   FHIR.oauth2.ready(function(smart) {
-    smart.api.fetchAll({type: 'Patient', query: patientParams}).then(
+    smart.api.fetchAll({type: 'Patient'}).then(
 
       // Display Patient information if the call succeeded
       function(patients) {
