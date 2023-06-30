@@ -135,6 +135,14 @@ function appointmentJSON(slotReference, patientReference) {
         status: 'needs-action'
       }
     ],
+    type: {
+      coding: [
+        {
+          system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14249",
+          code: "4047611"
+        }
+      ]
+    },
     status: 'proposed'
   };
 }
