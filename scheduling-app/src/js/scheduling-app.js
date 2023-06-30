@@ -135,7 +135,7 @@ function appointmentJSON(slotReference, patientReference) {
         status: 'needs-action'
       }
     ],
-    type: {
+    appointmentType: {
       coding: [
         {
           system: "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/14249",
@@ -143,6 +143,8 @@ function appointmentJSON(slotReference, patientReference) {
         }
       ]
     },
+    priority: 5,
+    description: "Discussion on the results of your recent MRI",
     status: 'proposed'
   };
 }
